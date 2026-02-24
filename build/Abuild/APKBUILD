@@ -1,0 +1,21 @@
+pkgname=nproc
+pkgver=0
+pkgrel=0
+pkgdesc="nproc for QNX"
+url="https://qnx.com"
+arch="all"
+license="LicenseRef-QDL-Non-Commercial"
+source="nproc.c"
+
+build() {
+    gcc nproc.c -O2 -o nproc
+}
+
+package() {
+    mkdir -p "$pkgdir"/usr/bin
+    install -v -m755 $srcdir/nproc "$pkgdir"/usr/bin
+}
+
+sha512sums="
+283d6847f926efcf8aa8046a56d1db0a5465b2f81c8d01ab872faf8123a261b87e18d34eb6bc2ee17ec1822841aa549884e805f1ec2236f9590b627c7dd99139  nproc.c
+"
