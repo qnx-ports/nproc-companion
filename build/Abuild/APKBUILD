@@ -1,6 +1,6 @@
 pkgname=nproc
 pkgver=0
-pkgrel=${pkgrel:-0}
+pkgrel=0
 pkgdesc="nproc for QNX"
 url="https://qnx.com"
 arch="all"
@@ -16,7 +16,6 @@ package() {
     install -v -m755 $srcdir/nproc "$pkgdir"/usr/bin
 }
 
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 283d6847f926efcf8aa8046a56d1db0a5465b2f81c8d01ab872faf8123a261b87e18d34eb6bc2ee17ec1822841aa549884e805f1ec2236f9590b627c7dd99139  nproc.c
 "
